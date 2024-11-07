@@ -1,0 +1,203 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar {
+    background-color: aqua;
+    padding: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+.menu-list {
+    display: flex;
+}
+
+.menu-list-item {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.menu-list-item a {
+    color: black;
+    border-radius: bold;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-list-item a:hover {
+    color: blue;
+    background-color: grey;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 5px 0;
+    min-width: 150px;
+    z-index: 20; 
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+.menu-list-item.dropdown:hover .submenu {
+    display: block;
+}
+
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    margin-top: 20px; 
+    background-color: aqua; 
+}
+
+.banner-images {
+    display: flex;
+    animation: scrollBanner 5s linear infinite;
+}
+
+.banner img {
+    width: 100vw; 
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+
+
+.feedback-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feedback-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+.feedback-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.feedback-form label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input and textarea styling */
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.feedback-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Submit button styling */
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+.personal-images-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.personal-photo {
+    margin-bottom: 20px;
+}
+
+.personal-photo img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 3px solid #333; 
+}
+
+
+.personal-photo p {
+    font-size: 30px;
+    color: #333;
+    margin-top: 30px;
+}
+
+.small-images {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 5px; 
+    margin-top: 20px;
+}
+
+.small-images img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 5px; 
+    object-fit: cover; 
+}
